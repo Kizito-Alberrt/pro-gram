@@ -1,0 +1,41 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c6263cab74.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/insta.css'%}">
+    <title>Instagram</title>
+    
+</head>
+<body>
+    <header>
+        <div class="navigator">
+            <div class="instalogo">
+
+                <a class="" href="/"><i class="fab fa-instagram"></i></a>
+                <a class="vi" href="/"></a>
+                <a href="/">Instagram</a>
+            </div>
+            <div class="searchbar">
+                <input type="text" placeholder="search">
+                <a class="search" href=""><i class="fas fa-search"></i></a>
+
+            </div>
+            <div class="contcts_icon">
+                <a class="profile" href="/"><i class="far fa-user"></i></a>
+                <a class="likes" href="/"><i class="far fa-heart"></i></a>
+                <a class="explore" href="/"><i class="far fa-compass"></i></a>
+
+            </div>
+        </div>
+    </header>
+    <div class="content_container">
+        {% block content%}
+        {% endblock%}
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+body{
+    background-color: aliceblue;
+}
+
+header{
+    background-color: aliceblue;
+    border-bottom: 1px solid aliceblue;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    padding: 20px 20px ;
+    flex-wrap: wrap;
+}
