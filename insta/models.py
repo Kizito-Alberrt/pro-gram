@@ -9,3 +9,7 @@ class Post(models.Model):
     image = models.ImageField(blank=True, null=True)
     caption = models.TextField()
     created_date = models.DateTimeField(default= timezone.new)
+
+
+    def _str_(self):
+        return self.caption
