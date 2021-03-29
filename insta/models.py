@@ -1,20 +1,8 @@
-from gram.settings import TIME_ZONE
 from django.db import models
 from django.contrib.auth.models import AbstractUser, AnonymousUser
 from typing import Union
-# from django.utils import timezone
+from django.utils import timezone
 
-# Create your models here.
-
-class Post(models.Model):
-    author = models.ForeignKey('auth.user',on_delete=models.CASCADE)
-    image = models.ImageField(blank=True, null=True)
-    caption = models.TextField()
-    created_date = models.DateTimeField
-
-
-    def __str__(self):
-        return self.caption
 
 class User(AbstractUser):
     profile_picture = models.ImageField(('profile_picture'),
@@ -47,6 +35,3 @@ class Post(models.Model):
 
     def get_image_url(self, obj):
         return obj.image.url
-
-
-   
